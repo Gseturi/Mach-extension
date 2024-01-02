@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Base Extension",
+  "description": "Basic extension for basic purposes:)",
+  "permissions": [
+    "activeTab"
+  ],
+  "version": "1.0",
+  "web_accessible_resources": [
+    {
+      
+      "resources": ["scare.PNG","fuzzy-jumpscare-80560.mp3"],
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "hello_extensions.png",
+    "32": "hello_extensions.png",
+    "48": "hello_extensions.png",
+    "128": "hello_extensions.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+      
+    }
+  ]
+}
